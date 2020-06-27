@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css?family=Itim');
+@import url('https://fonts.google.com/specimen/Roboto#standard-styles');
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family:"Itim" ;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #3475ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+}
+
+.main .tartalom {
+    position: relative;
+    max-width: 750px;
+    text-align: center;
+}
+
+.main .tartalom h2 {
+   color:#fff;
+   font-size: 50px;
+   
+}
+
+.main header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+.main header .logo {
+    position: relative;
+    background: url(javitott-2.png);
+    background-size: cover;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+}
+
+.main header .toggle {
+    position: relative;
+    width: 36px;
+    height: 28px;
+    background: url(text-indent-left.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.rolunk {
+position: relative;
+width: 100%;
+display: flex;
+}
+
+.rolunk .tartalomBx {
+    background: #162c3b;
+    padding: 100px;
+    width: 50%;
+}
+
+.cim {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-family: 'Roboto';
+}
+.rolunk .imgBox {
+    background: url(iranytu.jpg);
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.services {
+    background: #12222d;
+    padding: 100px;
+    text-align: center;
+}
+
+.services .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.services .container .serviceBx {
+    position: relative;
+    background: #fff;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.services .container .serviceBx img {
+    width: 100%;
+    height:100%;
+    max-height: 250px;
+    padding-bottom: 40px;
+    display: block;
+}
+
+.text2 {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  list-style-type: circle;
+  text-align: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  
+}
+/*servbx-nek az a része amin aszöveg van*/
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #3d56e4;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+  }
+
+  .serviceBx:hover .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+
+
+  /* Caption text */
+  .text3 {
+    color: #000000;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.753);
+  }
+  .text3 button {
+    text-align: center;
+  }
+
+  .text3 p {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  /*ahoz hogy a szöveg kattintásra elővarázsolodjon ez a háttér*/
+  .active, .collapsible:hover {
+    background-color: rgba(116, 116, 116, 0.644);
+  }
+
+  .collapsible {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+  }
+
+  .text3 h3 {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #000000;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    left: 0;
+  }
+  
+   /*a ref sectonben a kispontok a képeke alatt*/
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  /*a ref sectonben a kispontok a képeke alatt*/
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* animaciohoz*/
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* mobiltelefon optimalizáláshoz a slidshownak*/
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+  /* slideshow contner */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* a next és prev gombok kinézte */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* a "next" gomb elhelyezése*/
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* a tovább gimb takarásanak bellátása */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .ref {
+    
+    background:#162c3b;
+  }
+  .cim2 {
+    padding-bottom: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+
+  /*A listák rendezése és lépcsőzetes kialkitás*/
+  .lista {
+    list-style-position: inside;
+  }
+
+  .lista ul {
+    margin-left: 20px;
+  }
+/*A referencia szövegrész eltüntétese kattintásig*/
+  .content {
+    display: none;
+    overflow: hidden;
+  }
+
+  /*A képek elhelyezése egy feheér bg képen*/
+  .imgBx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .imgBx img {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 4px;
+  }
+
+  /* társadalmi felelősség válallalás*/
+  .tarsval {
+    position: relative;
+    padding: 100px;
+    background: #12222d;
+    text-align: center;
+  }
+  .doboz{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .tvBx {
+   background: #fff;
+   padding: 60px 40px;
+   margin-top: 20px;
+   width: 550px;
+   max-height: 120px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: left;
+   font-style: italic;
+  }
+
+
+   .kapcsolatBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    background: #162c3b;
+    height: 450px;
+   }
+
+   .jobbra{
+    float: left;
+    width: 50%;
+   }
+
+   .jobbra h3 {
+     text-align: left;
+     color: white;
+     font-size: 25px;
+     padding-left: 30px;
+     font-style: initial;
+   } 
+   .jobbra p {
+    text-align: left;
+    color: white;
+    font-size: 22px;
+    padding: 10px;
+    padding-left: 30px;
+   } 
+
+   .balra {
+    float: left;
+    width: 50%;
+    background: url(vege1.jpg);
+    background-size: cover;
+    background-position: center;
+   }   
+
+@media (max-width: 991px) {
+  .main .tartalom h2 {
+    font-size: 25px;
+  }
+  .main header .logo {
+    position: absolute;
+    left: 0;
+    width: 150px;
+    height: 30px;
+  }
+  .main header .toggle {
+    display: none;
+  }
+
+  .rolunk {
+    flex-direction: column;
+  }
+  .kapcsolatBox {
+    flex-direction: column;
+  }
+  .blara, .jobbra {
+    width: 100%;
+    text-align: center;
+  }
+  .cim2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .rolunk .tartalomBx, .rolunk .imgBox  {
+    width: 100%;
+    padding: 50px;
+    min-height: 400px;
+    text-align: center;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .services {
+    padding: 50px;
+  }
+
+  .services .container {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .services .container .serviceBx {
+    margin: 20px;
+    width: 300px;
+    height: 350px;
+  }
+  .text2 {
+    font-size: 15px;
+  }
+
+  .imgBx img {
+    max-width: 70px;
+    max-height: 70px;
+  }
+  .text3 h3 {
+    margin-bottom: 20px;
+  }
+  .content {
+    font-size: 11px;
+  }
+
+  .tvBx {
+    font-size: 11px;
+    max-width:300px ;
+    padding: 30px 20px;
+  }
+
+  .text3 button {
+    font-size: 15px;
+    padding: 5px;
+  }
+  .text3 {
+    padding: 5px;
+  }
+  .doboz {
+    margin-top: 12px;
+  }
+
+}
+   
+ 
+
+  
+   
+
+
